@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!--**Css do Projecto-->
+    <link rel="stylesheet" href="Css/style.css">
+    <!--**Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--**JavaScript do Projecto-->
+    <script src="Js/index.js" defer></script>
+</head>
+
+<body>
+
+    <div class="todoContainer">
+
+        <!--*Parte de adicionar tarefa-->
+
+        <header>ToDo Classico</header>
+        <form id="todoForm">
+            <p>Adicione a sua tarefa:</p>
+            <div class="formControl">
+                <input type="text" id="todoInput" placeholder="O que você vai fazer?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+
+            </div>
+        </form>
+
+        <!--**Parte de editar a tarefa-->
+
+        <form id="edit-form" class="hide">
+            <p>Edite a sua tarefa:</p>
+            <div class="formControl">
+                <input type="text" id="edit-Input">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancelEditBtn">Cancelar</button>
+        </form>
+
+        <!--*Local para pesquisar a tarefa-->
+
+        <div id="toolBar">
+            <div id="search">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="searchInput" placeholder="Buscar">
+                    <button id="eraseButton">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!--*Onde iremos filtrar as tarefa-->
+
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select name="" id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+        </div>
+
+        <!--*Template feitos-->
+
+        <div id="todo-list">
+            <div class="todo done">
+                <h3>Estou fazendo alguma coisa... </h3>
+                <button class="finish-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!--*Template 1*-->
+            <div class="todo">
+                <h3>Estou fazendo alguma coisa... </h3>
+                <button class="finish-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
